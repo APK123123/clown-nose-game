@@ -2,18 +2,18 @@ noseX = 0;
 noseY = 0;
 
 function preload(){
-clown_nose = loadImage('https://i.postimg.cc/fyjVJ90x/clown-nose.png')
+clown_nose = loadImage('https://i.postimg.cc/fyjVJ90x/clown-nose.png');
 }
 
 function setup() {
     canvas = createCanvas(300, 300); 
-    canvas.center()
+    canvas.center();
     video = createCapture(VIDEO);
     video.size(300, 300);
     video.hide();
 
     poseNet = ml5.poseNet(video, modelLoaded);
-    poseNet.on('pose', gotPoses)
+    poseNet.on('pose', gotPoses);
     }
 
     function modelLoaded(){
